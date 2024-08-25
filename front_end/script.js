@@ -44,3 +44,17 @@ document.getElementById('motivation').addEventListener('click', () => {
 document.getElementById('story').addEventListener('click', () => {
     console.log("Story button clicked");
 });
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            
+            console.log(`Navigating to: ${link.textContent}`);
+
+            window.location.href = link.href;
+        });
+    });
+});
